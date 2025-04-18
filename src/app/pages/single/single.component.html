@@ -6,16 +6,16 @@
       <div *ngIf="loading" class="lds-ripple"><div></div><div></div></div>
       <div class="containerBox" [@fade]="isVisible ? 'visible' : 'hidden'" *ngIf="!resultados">
         <div class="row">
-          <div class="col-md-8 person resultado2" id="resultado2" style="border: 5px solid #858585; border-radius: 5px;">
+          <div class="w-100 col-md-8 person resultado2" id="resultado2">
             <div class="row">
-          <div class="col-2">
+          <div class="col-2 dflex">
             <img src="/assets/img/Lleft.png" class="Lleft">
           </div>
           <div class="col-8">
             <img src="/assets/img/logonumerana80.png" alt="numeranamx" class="logo" style="height:80px;">
-            <h1 class="numerologia">Numerology | Numerología</h1>
+            <h1 class="numerologia" style="color: #E7E7D6;font-family: Morgan;font-size: 40px;font-weight: 400;text-transform: uppercase;width: 100%;padding-top: 1rem;">Numerology | Numerología</h1>
           </div>
-          <div class="col-2">
+          <div class="col-2 dflex">
             <img src="/assets/img/Lright.png" class="Lright">
           </div>
 
@@ -26,7 +26,7 @@
             <div class="row" id="name">
               <div class="col-2"></div>
               <div class="col-8">
-                <div class="form-group">
+                <div class="form-group form-flex">
                 <label for="Name"><b>Name/Nombre</b></label>
                 <input type="text" autocomplete="off" class="form-control textomv" name="Name" [(ngModel)]="Nombre"  [ngModelOptions]="{standalone: true}" placeholder="Name/Nombre">
               </div>
@@ -36,7 +36,7 @@
             <div class="row">
               <div class="col-2"></div>
               <div class="col-8">
-                       <div class="form-group" >
+                       <div class="form-group form-flex" >
                   <label for="birth"><b>Birthdate/Cumpleaños</b></label>
 
                   <input
@@ -59,17 +59,18 @@
             <div class="row" style="margin-bottom: 1rem;">
               <div class="col-3"></div>
               <div class="col-6" >
-                <button style="margin-top: 1rem;" type="button" (click)="subm()" class="btn btn-primary btn-lg btn-block send"><i class="bi bi-play-btn-fill" style="zoom: 2;line-height: 1;"></i></button>
+                <button type="button" (click)="subm()" class="btn btn-primary btn-lg btn-block send"><i class="bi bi-play-btn-fill" style="zoom: 2;line-height: 1;"></i></button>
               </div>
-              <div class="col-3">  <div class="row">
-                <div class="col-3"></div>
-                <div class="col-3"></div>
-                <div class="col-6"><h2 class="website www" style="font-size: 11px;right: 30px;">www.numerana.com</h2></div>
+              <div class="cop-block">  
+                <div class="row">
+                <!-- <div class="col-3"></div>
+                <div class="col-3"></div> -->
+                <div class=""><h2 class="website www" style="font-size: 18px;color: #E7E7D6;">www.numerana.com</h2></div>
               </div>
               <div class="row">
-                <div class="col-2"></div>
-                <div class="col-2"></div>
-                <div class="col-8"><h2 class="website ana" style="font-size: 11px;">By: Ana Dorotea</h2></div>
+                <!-- <div class="col-2"></div>
+                <div class="col-2"></div> -->
+                <div class=""><h2 class="website ana" style="font-size: 18px;color: #E7E7D6;">By: Ana Dorotea</h2></div>
               </div></div>
             </div>
 
@@ -86,45 +87,45 @@
   <div class="row">
     <div class="w-100 col-md-8 person resultado2" id="resultado2">
       <div class="row" style="justify-content: center;">
-    <!-- <div class="col-2">
+    <div class="col-2 dflex">
       <img src="/assets/img/Lleft.png" class="Lleft">
-    </div> -->
+    </div>
     <div class="col-8">
-      <!-- <img src="/assets/img/logonumerana80.png" alt="numeranamx" class="logo" style="height:80px;"> -->
-      <h1 class="numerologia" style="color: #E7E7D6;font-family: Morgan;font-size: 70px;font-weight: 400;">Numerology | Numerología</h1>
+      <img src="/assets/img/logonumerana80.png" alt="numeranamx" class="logo" style="height:80px;">
+      <h1 class="numerologia" style="color: #E7E7D6;font-family: Morgan;font-size: 55px;font-weight: 400;letter-spacing: 2px;">Numerology | Numerología</h1>
     </div>
-    <!-- <div class="col-2">
+    <div class="col-2 dflex">
       <img src="/assets/img/Lright.png" class="Lright">
-    </div> -->
+    </div>
 
     </div>
-      <h2 class="name bold">{{Nombre}}</h2>
-      <h2 class="bold footerbox">{{birthdateShow}}</h2>
+      <h2 class="name bold" style="color: #E7E7D6;font-size:20px;padding-top: 2rem;">{{Nombre}}</h2>
+      <h2 class="bold footerbox" style="color: #E7E7D6;font-size:20px;">{{birthdateShow}}</h2>
 
-      <div class="row" style="margin-bottom: 1rem;">
+      <div class="row" style="margin-bottom: 1rem;width: 100%;justify-content: center;">
         <!-- <div class="col-2"  *ngIf="!getScreenWidth"></div> -->
-        <div class="col-3" ></div>
+        <!-- <div class="col-3" ></div> -->
         <!-- *ngIf="getScreenWidth" -->
-        <div class="col-3">
-          <button type="button" (click)="reload()" class="btn btn-primary btn-lg btn-block send"><i class="bi bi-arrow-clockwise" style="zoom: 2;line-height: 1;"></i></button>
+        <div class="col-3" style="align-items: center;display: flex;justify-content: end;">
+          <button type="button" (click)="reload()" class="btn btn-restart btn-primary btn-lg btn-block send" style="width:60%;padding:5px;"><i class="bi bi-arrow-clockwise"></i><span>Restart</span></button>
         </div>
-        <div class="col-3">
-          <button type="button" (click)="downloadPdfOO()" class="btn btn-primary btn-lg btn-block send"><i class="bi bi-printer-fill" style="zoom: 2;line-height: 1;"></i></button>
+        <div class="col-3"  style="align-items: center;display: flex;justify-content:flex-start;">
+          <button type="button" (click)="downloadPdfOO()" class="btn btn-restart btn-primary btn-lg btn-block send" style="width:60%;padding:5px;"><i class="bi bi-printer-fill"></i><span>Print</span></button>
         </div>
-        <div class="col-3" *ngIf="getScreenWidth">
-          <div class="row">
-          <div class="col-3"></div>
-          <div class="col-3"></div>
-          <div class="col-6"><h2 class="website www" style="font-size: 11px;right: 30px;">www.numerana.com</h2></div>
-        </div>
-        <div class="row">
-          <div class="col-2"></div>
-          <div class="col-2"></div>
-          <div class="col-8"><h2 class="website ana" style="font-size: 11px;">By: Ana Dorotea</h2></div>
-        </div>
-         </div>
+        
 
   </div>
+  <div class="cop-block">  
+    <div class="row">
+    <!-- <div class="col-3"></div>
+    <div class="col-3"></div> -->
+    <div class=""><h2 class="website www" style="font-size: 18px;color: #E7E7D6;">www.numerana.com</h2></div>
+  </div>
+  <div class="row">
+    <!-- <div class="col-2"></div>
+    <div class="col-2"></div> -->
+    <div class=""><h2 class="website ana" style="font-size: 18px;color: #E7E7D6;">By: Ana Dorotea</h2></div>
+  </div></div>
   <div class="row" *ngIf="!getScreenWidth">
     <div class="col-3"></div>
     <div class="col-5">
