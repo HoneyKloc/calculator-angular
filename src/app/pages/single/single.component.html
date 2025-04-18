@@ -140,7 +140,7 @@
   </div>
 </div>
 
-  <div class="container" [@fade]="resultados ? 'visible' : 'hidden'"  >
+  <div class="container hr" [@fade]="resultados ? 'visible' : 'hidden'"  style="max-width: 100%;width: 100%;background: #FFFCF9;">
 <div class="row">
 <div class="col-8">
     <div class="A" >
@@ -381,7 +381,7 @@
 <!-- </mat-form-field> -->
  <!-- Meses desktop Page2-->
 
-<div class="row meses" [@fade]="resultadosMes ? 'visible' : 'hidden'">
+<div class="row meses hr" [@fade]="resultadosMes ? 'visible' : 'hidden'">
   <div class="row">
   <div class="col-12 px-0 mt-2" id="MCYQ1" *ngIf="resultadosMes">
     <app-mes [birthday]="birthdate" [from]="mobilMesSelect.Month" [to]="mobilMesSelect.Month" [show]="mobilMesSelect.year"></app-mes>
@@ -404,7 +404,7 @@
   </div>
 
   <div *ngIf="resultados" class="Anual page" id="page2">
-    <div class="row meses" [@fade]="resultados ? 'visible' : 'hidden'">
+    <div class="row meses hr" [@fade]="resultados ? 'visible' : 'hidden'">
       <div class="row" *ngIf="MontsVisble.CYQ1">
       <div class="col-12 px-0" id="CYQ1">
         <app-mes [birthday]="birthdate" [from]="0" [to]="3" [show]="0"></app-mes>
@@ -441,12 +441,12 @@
     </div>
     <!-- Page3 -->
 
-    <div class="Anual diasfix page" *ngIf="resultados"  [@fade]="resultados ? 'visible' : 'hidden'">
+    <!-- <div class="Anual diasfix hr page" *ngIf="resultados"  [@fade]="resultados ? 'visible' : 'hidden'">
       <div class="row mx-auto" style="width: 80%;    font-weight: 700;font-size: 17px;">
         <div class="col">D DAY/DÍA</div><div class="col">U UNIVERSAL</div><div class="col">P PERSONAL</div>
       </div>
       <app-dias [birthday]="birthdate" [from]="0" [to]="11" [show]="0" [couple]="false"></app-dias>
-    </div>
+    </div> -->
 
   </div>
   </main>
